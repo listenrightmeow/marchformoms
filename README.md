@@ -1,5 +1,3 @@
-# B2B Client Dashboard
-
 ### Installation
 
 The following command manages all installation requirements detailed below
@@ -25,7 +23,7 @@ Grunt: application automation and secret management
 
 ### Running the application
 
-Port `8000` is utilized in order to run React in conjunction with the Rails backend application on port `3000`.
+Port `8000` is utilized for local development.
 
 ```
 grunt start --env=ENVIRONMENT
