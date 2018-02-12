@@ -1,0 +1,113 @@
+a.btn, button.btn {
+  display: flex !important;
+  align-self: center !important;
+  justify-content: center !important;
+  background-color: rgb(195, 205, 220) !important;
+  width: 120px !important;
+  height: 58px !important;
+  color: rgb(255, 255, 255) !important;
+  text-transform: capitalize !important;
+  cursor: pointer;
+
+  &.blue {
+    background-color: rgb(106, 206, 240) !important;
+
+    &:hover {
+      background-color: rgb(87, 142, 157) !important;
+    }
+  }
+
+  &.green {
+    background-color: rgb(84, 185, 110) !important;
+
+    &:hover {
+      background-color: rgb(70, 132, 88) !important;
+    }
+
+    &.disabled {
+      background-color: rgba(84, 185, 110, 0.5) !important;
+      color: rgba(255, 255, 255, 0.5);
+      cursor: default;
+
+      &:hover {
+        background-color: rgba(84, 185, 110, 0.5) !important;
+      }
+    }
+  }
+
+  &.red {
+    background-color: rgb(234, 32, 61) !important;
+
+    &:hover {
+      background-color: rgb(162, 46, 55) !important;
+    }
+  }
+
+  i {
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 58px;
+  }
+}
+
+#modal {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  min-width: 100%;
+  min-height: 100%;
+
+  &.close {
+    display: none;
+  }
+
+  &.open {
+    display: block;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  article:first-child {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: #fff;
+    max-width: 480px;
+    width: 78%;
+    height: auto;
+
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+
+    button#close {
+      position: absolute;
+      z-index: 4;
+      top: 2%;
+      right: 2%;
+      float: right;
+      width: 15px;
+      height: 15px;
+
+      svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: inherit;
+        height: inherit;
+      }
+    }
+  }
+}

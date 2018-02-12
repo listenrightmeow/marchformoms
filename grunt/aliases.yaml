@@ -1,0 +1,16 @@
+build:
+  - 'setup'
+  - 'shell:build'
+
+encrypt:
+  - 'copy:vault'
+  - 'vault'
+  - 'setup'
+
+setup:
+  - 'decrypt'
+  - 'envfile'
+
+start:
+  - 'setup'
+  - 'shell:start'

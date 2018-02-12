@@ -1,0 +1,146 @@
+#navigation {
+  background-repeat: no-repeat;
+  background-image:
+  linear-gradient(to right, rgb(168, 174, 185), rgb(168, 174, 185)),
+  linear-gradient(to right, rgb(202, 211, 224), rgb(202, 211, 224));
+
+  background-position: 0 0, 0 60px;
+  background-size: 100% 60px;
+  height: 120px;
+  margin-bottom: 28px;
+  padding: 0 9.375%;
+
+  nav:first-child {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+
+    ul:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      li {
+        margin-right: 5%;
+
+        &:first-of-type {
+          margin-right: 10%;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.active {
+          background-color: rgb(106, 206, 240);
+          padding: 0 18px;
+          line-height: 36px;
+          border: none;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    ul:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-left: 5%;
+
+      li {
+        margin-right: 25%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  nav:last-child {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+
+    ul {
+      display: none;
+      align-items: center;
+      justify-content: flex-start;
+
+      li {
+        margin-right: 25%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.active {
+          button {
+            color: rgb(255, 255, 255);
+          }
+        }
+
+        button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          outline: none;
+        }
+      }
+
+      &.active {
+        display: flex;
+        /* flex-grow: 1; */
+        justify-content: flex-start;
+      }
+
+      &#event-actions {
+        display: none;
+        align-items: center;
+        justify-content: flex-end;
+
+        &.active {
+          display: flex;
+        }
+
+        li {
+          margin-right: 5%;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          button {
+            padding: 11px 17.5px;
+            color: #fff;
+            border-radius: 4px;
+
+            &#delete {
+              background-color: rgb(234, 32, 61);
+
+              &:hover {
+                background-color: rgb(162, 46, 55);
+              }
+            }
+
+            &#duplicate {
+              background-color: rgb(242, 128, 48);
+
+              &:hover {
+                background-color: rgb(165, 95, 48);
+              }
+            }
+
+            &#exit {
+              background-color: rgb(168, 173, 185);
+
+              &:hover {
+                background-color: rgba(168, 173, 185, 0.5);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
